@@ -1,0 +1,103 @@
+<div class="container">
+    <ul class="block-features__list">
+        <li class="block-features__item">
+            <div class="block-features__item-icon">
+                <img
+                    src="../../../../assets/images/icons/car.png"
+                    alt=""
+                    width="40"
+                />
+            </div>
+            <div class="block-features__item-info">
+                <a [routerLink]="['/cars']">
+                    <div class="block-features__item-title">
+                        {{ "CAR" | translate }}
+                    </div>
+                    <div class="block-features__item-subtitle">
+                        Buy - Plan
+                    </div>
+                </a>
+            </div>
+        </li>
+        <div class="divider-line"></div>
+        <li class="block-features__item waves-effect waves-light">
+            <div class="block-features__item-icon">
+                <img
+                    src="../../../../assets/images/icons/property-icon.png"
+                    alt=""
+                    width="35"
+                />
+            </div>
+            <div class="block-features__item-info">
+                <a [routerLink]="['/property']">
+                    <div class="block-features__item-title">
+                        {{ "PROPERTY" | translate }}
+                    </div>
+                    <div class="block-features__item-subtitle">
+                        Buy - Plan
+                    </div>
+                </a>
+            </div>
+        </li>
+        <div class="divider-line"></div>
+        <li class="block-features__item">
+            <div class="block-features__item-icon">
+                <img
+                    src="../../../../assets/images/icons/plane-icon.png"
+                    alt=""
+                    width="40"
+                />
+            </div>
+            <div class="block-features__item-info">
+                <a href="">
+                    <div class="block-features__item-title">
+                        {{ "TRAVEL" | translate }}
+                    </div>
+                    <div class="block-features__item-subtitle">
+                        Hotels - Tickets - Insurance
+                    </div>
+                </a>
+            </div>
+        </li>
+        <div class="divider-line"></div>
+        <li class="block-features__item">
+            <div class="block-features__item-icon">
+                <img
+                    src="../../../../assets/images/icons/insurance-icon.png"
+                    alt=""
+                    width="40"
+                />
+            </div>
+            <div class="block-features__item-info">
+                <a href="">
+                    <div class="block-features__item-title">
+                        {{ "INSURANCE" | translate }}
+                    </div>
+                    <div class="block-features__item-subtitle">
+                        For You Cars - Health
+                    </div>
+                </a>
+            </div>
+        </li>
+        <div class="divider-line"></div>
+        <li class="block-features__item">
+            <div class="block-features__item-icon">
+                <img
+                    src="../../../../assets/images/icons/voucher-icon.png"
+                    alt=""
+                    width="40"
+                />
+            </div>
+            <div class="block-features__item-info">
+                <a [routerLink]="['/shop/category/vouchers']">
+                    <div class="block-features__item-title">
+                        {{ "VOUCHER" | translate }}
+                    </div>
+                    <div class="block-features__item-subtitle">
+                        PS - iTunes - Google
+                    </div>
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>
