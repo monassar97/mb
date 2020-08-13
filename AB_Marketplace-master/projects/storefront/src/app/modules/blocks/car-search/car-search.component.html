@@ -1,10 +1,9 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <app-decor class="block-finder__decor" type="bottom"></app-decor>
-<div
-    class="block-finder__image"
-    style="background-color: white; opacity: 1;"
-></div>
+<div class="block-finder__image" style="background-color: white; opacity: 1;"></div>
 <div class="block-finder__body container container--max--xl">
-    <div class="block-finder__title" style="color: black;">Car</div>
+    <div class="block-finder__title" style="color: royalblue; margin-bottom: 30px;
+    margin-top: 10px;"><i class="fas fa-car fa-3x"></i></div>
     <!-- <div class="block-finder__subtitle">{{ 'TEXT_BLOCK_FINDER_SUBTITLE'|translate }}</div> -->
     <div class="warpper">
         <input class="radio" id="one" name="group" type="radio" checked />
@@ -19,22 +18,16 @@
             <div class="panel" id="one-panel">
                 <div class="block-finder__body container container--max--xl">
                     <form class="block-finder__form" (submit)="submit()">
-                        <select
-                            class="vehicle-select__item-control"
-                            #selectedBrand
-                            (change)="onBrandSelected(selectedBrand.value)"
-                        >
+                        <select class="vehicle-select__item-control" #selectedBrand
+                            (change)="onBrandSelected(selectedBrand.value)">
                             <option value="none">Brand</option>
                             <option value="Ford">Ford</option>
                             <option value="Audi">Audi</option>
                             <option value="BMW">BMW</option>
                         </select>
 
-                        <select
-                            class="vehicle-select__item-control"
-                            #selectedYear
-                            (change)="onYearSelected(selectedYear.value)"
-                        >
+                        <select class="vehicle-select__item-control" #selectedYear
+                            (change)="onYearSelected(selectedYear.value)">
                             <option value="all">Year </option>
                             <option value="2015" name="" id="">
                                 2015
@@ -57,11 +50,11 @@
                         </select>
 
                         <select class="vehicle-select__item-control" #selectedPrice
-                        (change)="onYearSelected(selectedYear.value)">
+                            (change)="onYearSelected(selectedYear.value)">
                             <option value="all">Price </option>
 
                             <option value="0-10000">
-                            0-10,000
+                                0-10,000
                             </option>
                             <option value="10001-15000">10,001-15,000
                             </option>
@@ -71,18 +64,14 @@
                             </option>
                         </select>
 
-                        <a
-                            [routerLink]="['/shop/category/cars']"
-                            [queryParams]="{
+                        <a [routerLink]="['/shop/category/cars']" [queryParams]="{
                                 brand: selectedBrand.value,
                                 year: selectedYear.value,
                                 price: selectedPrice.value
-                            }"
-                        >
+                            }">
                             <button class="block-finder__button" type="submit">
                                 {{ "BUTTON_BLOCK_FINDER_SEARCH" | translate }}
-                            </button></a
-                        >
+                            </button></a>
                     </form>
                 </div>
             </div>
@@ -158,92 +147,50 @@
                             </option>
                         </select>
 
-                        <a
-                            [routerLink]="[
+                        <a [routerLink]="[
                                 'http://localhost:4200/shop/category/cars'
-                            ]"
-                        >
+                            ]">
                             <button class="block-finder__button" type="submit">
                                 {{ "BUTTON_BLOCK_FINDER_SEARCH" | translate }}
-                            </button></a
-                        >
+                            </button></a>
                     </form>
                 </div>
             </div>
             <div class="panel" id="three-panel">
                 <h5>How much I make monthlly</h5>
                 <div class="block-finder__body container container--max--xl">
-                    <input
-                        type="range"
-                        min="1"
-                        max="10000"
-                        value="0"
-                        class="slider"
-                        #income
-                        (change)="onChangeIncomeValue(income.value)"
-                        data-toggle="tooltip"
-                        data-placement="top"
-                        trigger="click"
-                        title="{{ incomeValue }}"
-                    />
+                    <input type="range" min="1" max="10000" value="0" class="slider" #income
+                        (change)="onChangeIncomeValue(income.value)" data-toggle="tooltip" data-placement="top"
+                        trigger="click" title="{{ incomeValue }}" />
                     <p style="color: black;">{{ incomeValue }} $</p>
                 </div>
 
                 <h5>How much I could pay</h5>
 
                 <div class="block-finder__body container container--max--xl">
-                    <input
-                        type="range"
-                        min="1"
-                        max="10000"
-                        value="0"
-                        class="slider"
-                        #monthlyinstallment
-                        (change)="
+                    <input type="range" min="1" max="10000" value="0" class="slider" #monthlyinstallment (change)="
                             onChangeMonthlyInstallmentValue(
                                 monthlyinstallment.value
                             )
-                        "
-                        data-toggle="tooltip"
-                        data-placement="top"
-                        title="{{ monthlyinstallmentValue }}"
-                    />
+                        " data-toggle="tooltip" data-placement="top" title="{{ monthlyinstallmentValue }}" />
                     <p style="color: black;">{{ monthlyinstallmentValue }} $</p>
                 </div>
 
                 <h5>How much I have as other liabilities</h5>
 
                 <div class="block-finder__body container container--max--xl">
-                    <input
-                        type="range"
-                        min="1"
-                        max="10000"
-                        value="0"
-                        class="slider"
-                        #liabilities
-                        (change)="onChangeLiabilitiesValue(liabilities.value)"
-                        data-toggle="tooltip"
-                        data-placement="top"
-                        title="{{ liabilitiesValue }}"
-                    />
+                    <input type="range" min="1" max="10000" value="0" class="slider" #liabilities
+                        (change)="onChangeLiabilitiesValue(liabilities.value)" data-toggle="tooltip"
+                        data-placement="top" title="{{ liabilitiesValue }}" />
                     <p style="color: black;">{{ liabilitiesValue }} $</p>
                 </div>
 
                 <h5>How much months my plan</h5>
 
                 <div class="block-finder__body container container--max--xl">
-                    <input
-                        type="range"
-                        min="1"
-                        max="96"
-                        value="0"
-                        class="slider"
-                        #years
-                        (change)="onChangeYearsValue(years.value)"
-                        data-toggle="tooltip"
-                        data-placement="top"
-                        title="Tooltip on top"
-                    />
+                    <input type="range" min="1" max="96" value="0" class="slider" #years
+                        (change)="onChangeYearsValue(years.value)" data-toggle="tooltip" data-placement="top"
+                        title="Tooltip on top" />
                     <p style="color: black;">
                         {{ yearsValue }} Months
                         <!-- -
